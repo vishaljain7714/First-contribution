@@ -1,0 +1,47 @@
+
+
+
+#include <iostream>
+
+// Template function to swap two values
+template <typename T>
+void swap(T &a, T &b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+// Template function to print an array
+template <typename T>
+void printArray(T arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    // Using the swap function with integers
+    int a = 10, b = 20;
+    std::cout << "Before swap: a = " << a << ", b = " << b << std::endl;
+    swap(a, b);
+    std::cout << "After swap: a = " << a << ", b = " << b << std::endl;
+
+    // Using the swap function with floats
+    float x = 10.5, y = 20.8;
+    std::cout << "Before swap: x = " << x << ", y = " << y << std::endl;
+    swap(x, y);
+    std::cout << "After swap: x = " << x << ", y = " << y << std::endl;
+
+    // Using the printArray function with integers
+    int intArray[] = {1, 2, 3, 4, 5};
+    std::cout << "Integer array: ";
+    printArray(intArray, 5);
+
+    // Using the printArray function with floats
+    float floatArray[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    std::cout << "Float array: ";
+    printArray(floatArray, 5);
+
+    return 0;
+}
