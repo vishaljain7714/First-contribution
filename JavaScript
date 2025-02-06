@@ -1,0 +1,29 @@
+
+
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+
+This function uses recursion to calculate the factorial. You can call it with a number, like this:
+
+
+console.log(factorial(5)); // Output: 120
+
+
+Note that this function does not handle cases where the input is a negative number or a non-integer. You might want to add some error checking code to handle those cases.
+
+Here's an iterative version of the function:
+
+
+function factorial(n) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
